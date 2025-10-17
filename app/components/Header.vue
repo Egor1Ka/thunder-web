@@ -4,7 +4,9 @@
       <nav class="navbar navbar-expand rounded-pill bg-dark px-4 w-100">
         <ul class="navbar-nav gap-4">
           <li class="nav-item">
-            <a class="nav-link fw-bold text-white" href="#">Team</a>
+            <NuxtLink class="nav-link fw-bold text-white" to="/team"
+              >Team</NuxtLink
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link fw-bold text-white" href="#">Matches</a>

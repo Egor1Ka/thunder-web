@@ -1,7 +1,7 @@
 export default defineEventHandler(async () => {
-  const sourceUrl = "https://sheetdb.io/api/v1/mkyt85pd7lnlo?sheet=games";
+  const sourceUrl =
+    "https://sheetjson.com/spreadsheets/d/1P2uL6d7tCnn3z7lqe4uJgzX5bBwyuu07SJb1OFjM-UY/edit?gid=452320508#gid=452320508";
 
-  console.log({ sourceUrl });
   try {
     const raw = await $fetch(sourceUrl, {
       responseType: "text",
@@ -9,7 +9,6 @@ export default defineEventHandler(async () => {
     });
 
     const data = JSON.parse(raw);
-    console.log({ data });
     return data;
   } catch (err) {
     console.log("err", err);

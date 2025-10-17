@@ -1,6 +1,7 @@
 // server/api/players.get.js
 export default defineEventHandler(async () => {
-  const sourceUrl = "https://sheetdb.io/api/v1/mkyt85pd7lnlo?sheet=players";
+  const sourceUrl =
+    "https://sheetjson.com/spreadsheets/d/1P2uL6d7tCnn3z7lqe4uJgzX5bBwyuu07SJb1OFjM-UY/edit?gid=0#gid=0";
 
   try {
     const raw = await $fetch(sourceUrl, {
