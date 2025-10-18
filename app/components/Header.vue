@@ -4,33 +4,25 @@
       <nav class="navbar navbar-expand rounded-pill bg-dark px-4 w-100">
         <ul class="navbar-nav gap-4">
           <li class="nav-item">
+            <NuxtLink class="nav-link fw-bold text-white" to="/">
+              <NuxtImg
+                class="rounded-circle mx-auto"
+                src="/images/thunder-logo.jpg"
+                height="30"
+                alt="dabl logo"
+                loading="lazy"
+              />
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
             <NuxtLink class="nav-link fw-bold text-white" to="/team"
               >Team</NuxtLink
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold text-white" href="#">Matches</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-white" href="#">News</a>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle fw-bold text-white"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+            <NuxtLink class="nav-link fw-bold text-white" to="/activity"
+              >Activity</NuxtLink
             >
-              UA
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">UA</a></li>
-              <li><a class="dropdown-item" href="#">EN</a></li>
-            </ul>
           </li>
         </ul>
       </nav>

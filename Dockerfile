@@ -1,5 +1,5 @@
 # ---------- Build stage ----------
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 
 # Опционально (иногда помогает с бинарями)
 RUN apk add --no-cache libc6-compat
@@ -20,7 +20,7 @@ COPY . .
 RUN npm run build
     
 # ---------- Runtime stage ----------
-FROM node:20-alpine AS prod
+FROM node:22-alpine AS prod
     
 WORKDIR /app
     

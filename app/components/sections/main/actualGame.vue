@@ -107,8 +107,6 @@ const getLastGame = (games) => {
 };
 
 const game = ref(getLastGame(data.value));
-
-const event = ref(fallback);
 </script>
 
 <style scoped>
