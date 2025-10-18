@@ -57,7 +57,8 @@
           <Reveal
             as="a"
             :delay="600"
-            href="#"
+            :href="DABL_LEAGUE_SOCIAL_MEDIA.telegram"
+            target="_blank"
             class="btn btn-outline-light btn-lg px-4 d-inline-flex align-items-center gap-3 cta w-auto"
           >
             <span>LEARN MORE</span>
@@ -66,7 +67,7 @@
         </div>
 
         <!-- ПРАВАЯ КОЛОНКА С ФОТО -->
-        <div class="col-lg-5 p-0 h-100 photo">
+        <div class="col-lg-5 p-0 h-100 photo d-none d-lg-block">
           <Reveal as="h1" :delay="400">
             <nuxt-img
               src="/images/mel.png"
@@ -87,6 +88,7 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 import Reveal from "@/components/Reveal.vue";
 import { getNumericDate } from "~/helpers/date";
+import { DABL_LEAGUE_SOCIAL_MEDIA } from "~/helpers/constansts/links";
 
 const fallback = {
   description:

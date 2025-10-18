@@ -12,7 +12,7 @@
             direction="up"
             :once="true"
           >
-            RISE <span>AN</span> <br />EMPIRE.
+            THREE <span>TWO</span> <span>ONE</span><br />THUNDER!
           </Reveal>
         </div>
 
@@ -94,7 +94,7 @@ import Header from "~/components/Header.vue";
   position: relative;
   z-index: 1;
   margin: 0;
-  font-size: clamp(2.5rem, 8vw, 12rem);
+  font-size: clamp(2.5rem, 6vw, 12rem);
   line-height: 0.9;
   font-weight: 900;
   letter-spacing: 0.02em;

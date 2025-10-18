@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.11.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "nuxt": "^4.1.2",
     "nuxt-icons": "^4.0.0",
     "swiper": "^12.0.2",

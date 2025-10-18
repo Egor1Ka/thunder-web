@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import Instagram from "./svg/instagram.vue";
+import Telegram from "./svg/telegram.vue";
+import Tiktok from "./svg/tiktok.vue";
+import Zsu from "./svg/zsu.vue";
+import Youtube from "./svg/youtube.vue";
+import {
+  SOTIAL_MEDIA,
+  DABL_LEAGUE_SOCIAL_MEDIA,
+} from "~/helpers/constansts/links";
+</script>
+
 <template>
   <footer class="bg-black text-center text-lg-start text-white">
     <div class="container">
@@ -7,25 +19,29 @@
             <div
               class="d-flex align-items-center justify-content-center mb-4 flex-column"
             >
-              <NuxtImg
-                class="rounded-circle mb-4 mx-auto"
-                src="/images/thunder-logo.jpg"
-                height="70"
-                alt="dabl logo"
-                loading="lazy"
-              />
-              <NuxtImg
-                class="rounded-circle mb-4 mx-auto"
-                src="/images/dabl-logo.jpg"
-                height="70"
-                alt="dabl logo"
-                loading="lazy"
-              />
+              <a :href="SOTIAL_MEDIA.site" class="text-decoration-none">
+                <NuxtImg
+                  class="rounded-circle mb-4 mx-auto"
+                  src="/images/thunder-logo.jpg"
+                  height="70"
+                  alt="dabl logo"
+                  loading="lazy"
+                />
+              </a>
+              <a :href="DABL_LEAGUE_SOCIAL_MEDIA.telegram">
+                <NuxtImg
+                  class="rounded-circle mb-4 mx-auto"
+                  src="/images/dabl-logo.jpg"
+                  height="70"
+                  alt="dabl logo"
+                  loading="lazy"
+                />
+              </a>
             </div>
 
             <p class="text-center">
-              Homless animal shelter The budgetary unit of the Capital City of
-              Warsaw
+              Приєднуйся до родини Thunder — стань частиною команди та слідкуй
+              за нами в соціальних мережах!
             </p>
 
             <ul class="list-unstyled d-flex flex-row justify-content-center">
@@ -48,107 +64,56 @@
           </div>
 
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Animals</h5>
-
+            <h5 class="text-uppercase mb-4">Social media</h5>
             <section class="mb-4">
-              <!-- Facebook -->
+              <!-- telegram -->
               <a
                 data-mdb-ripple-init
                 class="btn text-white btn-floating m-1"
-                style="background-color: #3b5998"
-                href="#!"
+                :href="DABL_LEAGUE_SOCIAL_MEDIA.telegram"
                 role="button"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
+                target="_blank"
+                ><Telegram />
+              </a>
 
-              <!-- Twitter -->
+              <!-- Tiktok -->
               <a
                 data-mdb-ripple-init
                 class="btn text-white btn-floating m-1"
-                style="background-color: #55acee"
-                href="#!"
+                :href="SOTIAL_MEDIA.tiktok"
                 role="button"
-                ><i class="fab fa-twitter"></i
-              ></a>
-
-              <!-- Google -->
-              <a
-                data-mdb-ripple-init
-                class="btn text-white btn-floating m-1"
-                style="background-color: #dd4b39"
-                href="#!"
-                role="button"
-                ><i class="fab fa-google"></i
-              ></a>
+                target="_blank"
+                ><Tiktok />
+              </a>
 
               <!-- Instagram -->
               <a
                 data-mdb-ripple-init
                 class="btn text-white btn-floating m-1"
-                style="background-color: #ac2bac"
-                href="#!"
+                :href="SOTIAL_MEDIA.instagram"
+                target="_blank"
                 role="button"
-                ><i class="fab fa-instagram"></i
-              ></a>
-
-              <!-- Linkedin -->
+              >
+                <Instagram />
+              </a>
               <a
                 data-mdb-ripple-init
                 class="btn text-white btn-floating m-1"
-                style="background-color: #0082ca"
-                href="#!"
+                :href="SOTIAL_MEDIA.donatZSU"
+                target="_blank"
                 role="button"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <!-- Github -->
+              >
+                <Zsu />
+              </a>
               <a
                 data-mdb-ripple-init
                 class="btn text-white btn-floating m-1"
-                style="background-color: #333333"
-                href="#!"
+                target="_blank"
+                :href="SOTIAL_MEDIA.youtube"
                 role="button"
-                ><i class="fab fa-github"></i
-              ></a>
+                ><Youtube />
+              </a>
             </section>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Animals</h5>
-
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="#!" class="text-white"
-                  ><i class="fas fa-paw pe-3"></i>General information</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="#!" class="text-white"
-                  ><i class="fas fa-paw pe-3"></i>About the shelter</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="#!" class="text-white"
-                  ><i class="fas fa-paw pe-3"></i>Statistic data</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="#!" class="text-white"
-                  ><i class="fas fa-paw pe-3"></i>Job</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="#!" class="text-white"
-                  ><i class="fas fa-paw pe-3"></i>Tenders</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="#!" class="text-white"
-                  ><i class="fas fa-paw pe-3"></i>Contact</a
-                >
-              </li>
-            </ul>
           </div>
           <!--Grid column-->
 
@@ -158,17 +123,15 @@
 
             <ul class="list-unstyled">
               <li>
-                <p>
-                  <i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street,
-                  Poland
-                </p>
-              </li>
-              <li>
-                <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
+                <p>Dnipro, Богдана Хмельницкого, 118А</p>
               </li>
               <li>
                 <p>
-                  <i class="fas fa-envelope pe-2 mb-0"></i>contact@example.com
+                  <a
+                    href="tel:+380989734518"
+                    class="text-decoration-none text-white"
+                    >+380 (98) 973 4518</a
+                  >
                 </p>
               </li>
             </ul>
@@ -176,12 +139,27 @@
           <!--Grid column-->
         </div>
       </div>
-      <div class="text-center p-3 bg-secondary">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
-        >
-      </div>
+    </div>
+    <div class="text-center p-3 bottom-gradient">
+      © {{ new Date().getFullYear() }} Created by:
+      <a class="text-white text-decoration-none" href="https://zaza21.com/"
+        >ZAZA 21
+      </a>
     </div>
   </footer>
 </template>
+
+<style scoped>
+.bottom-gradient {
+  bottom: 0;
+  background: radial-gradient(
+      120% 100% at 50% 100%,
+      rgba(216, 86, 34, 0.95) 0%,
+      rgba(216, 86, 34, 0.65) 45%,
+      rgba(216, 86, 34, 0) 75%
+    ),
+    linear-gradient(0deg, rgba(216, 86, 34, 0.85) 0%, rgba(216, 86, 34, 0) 90%);
+  mix-blend-mode: normal;
+  z-index: 0;
+}
+</style>

@@ -6,4 +6,13 @@ export default defineNuxtConfig({
   image: {
     domains: ["drive.google.com", "lh3.googleusercontent.com"],
   },
+  buildModules: ["@nuxtjs/google-analytics"],
+  googleAnalytics: {
+    id: "G-C9QRWM34NG",
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+  },
 });
